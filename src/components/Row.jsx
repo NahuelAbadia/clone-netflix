@@ -15,7 +15,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     // si [], se ejecuta una vez cuando se carga la fila y no se vuelve a ejecutar
     async function fetchData() {
       const request = await axios.get(fetchUrl)
-      // console.log(request.data.results)
+      console.log(request.data.results)
       setMovies(request.data.results)
       return request
     }
